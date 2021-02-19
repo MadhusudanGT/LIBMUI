@@ -8,10 +8,12 @@ import { RegistrationPageComponent } from './registration-page/registration-page
 import {FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule} from './materials-module';
+import { LoginPageComponent } from './login-page/login-page.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationPageComponent,
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,

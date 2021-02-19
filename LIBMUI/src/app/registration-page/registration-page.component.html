@@ -2,10 +2,10 @@
        
   <div>
     <form #newUserForm="ngForm" (ngSubmit)="onSubmit(newUserForm)" class="center">
-        <mat-card style="width: 300px;height: 490PX;">
+        <mat-card style="width: 300px;height: 520PX;">
             <h2 style="text-align: center;color: red;">REGISTRATION FORM</h2>
         <p style="margin-left: 20px;margin-top: 20px;">
-            <mat-form-field appearance="legacy">
+            <mat-form-field appearance="legacy" style="width: 236px;">
                 <mat-label>USER NAME</mat-label>
               <input matInput type="text" placeholder="User name"
                required maxlength="25"
@@ -18,7 +18,7 @@
           </p>
 
           <p style="margin-left: 20px;">
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" style="width: 236px;">
               <mat-label>LAST NAME</mat-label>
               <input matInput type="text" placeholder="Last Name"
               required maxlength="25"
@@ -31,11 +31,11 @@
           </p>
 
           <p style="margin-left: 20px;">
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" style="width: 236px;">
               <mat-label>EMAIL ID</mat-label>
               <input matInput type="email" placeholder="Email"
               required maxlength="25"
-              [(ngModel)]="email" name="email"
+              [(ngModel)]="email" name="email" email="true" ngModel
               #userEmail="ngModel">
               <mat-hint> <div *ngIf="!userEmail.valid && userEmail.touched">
                 EMAIL ID is required!
@@ -44,7 +44,7 @@
           </p>
     
           <p style="margin-left: 20px;">
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" style="width: 236px;">
                 <mat-label>Enter your password</mat-label>
                 <input  matInput [type]="hide ? 'password' : 'text'" placeholder="Password" required
               [(ngModel)]="password" name="password" minlength="8"
@@ -77,12 +77,15 @@
               </mat-form-field>
           </p>
        
-          <button  mat-raised-button color="primary" type="submit" [disabled]="!newUserForm.form.valid" style="margin-left: 20px;">
+          <button  mat-raised-button color="primary" type="submit"  style="margin-left: 20px;width: 94px;">
             Register</button>
       
-        <button mat-flat-button color="primary" (click)="newUserForm.reset()" style="margin-left: 20px;">
+        <button mat-flat-button color="primary" (click)="newUserForm.reset()" style="margin-left: 45px;width: 94px;">
           Reset
         </button>
+        <mat-card-content style="text-align: center;margin: 20px;">
+          <a>Alredy Registrated ? </a> <a routerLink="/login" routerLinkActive="active">LOGIN HERE</a>
+       </mat-card-content>
     </mat-card>
       </form>
     </div>

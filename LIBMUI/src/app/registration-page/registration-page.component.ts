@@ -11,7 +11,7 @@ export class RegistrationPageComponent implements OnInit {
   constructor(private _snackBar: MatSnackBar) {}
 
   openSnackBar() {
-    this._snackBar.open('BOTH PASSWORD MUST MATCH', "CHECK THE DETAILS", {
+    this._snackBar.open('BOTH PASSWORD MUST MATCH', "FILL THE FORM FIELDS", {
       duration: 5000,
     });
   }
