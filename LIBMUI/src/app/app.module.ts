@@ -10,7 +10,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule} from './materials-module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { DragScrollModule } from 'ngx-drag-scroll';
 import { NgImageSliderModule } from 'ng-image-slider';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +28,9 @@ import { NgImageSliderModule } from 'ng-image-slider';
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
+    CarouselModule ,
+    MatCarouselModule.forRoot(),
+    DragScrollModule,
     NgImageSliderModule
   ],
   providers: [],
