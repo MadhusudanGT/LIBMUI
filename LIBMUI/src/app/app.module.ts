@@ -9,18 +9,22 @@ import {FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule} from './materials-module';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationPageComponent,
     LoginPageComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
